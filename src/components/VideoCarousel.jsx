@@ -33,20 +33,23 @@ const VideoCarousel = () => {
     });
 
     // video animation to play the video when it is in the view
-    gsap.to("#video", {
+    gsap.to(videoRef.current[videoId], {
       scrollTrigger: {
-        trigger: "#video",
-        toggleActions: "restart none none none",
-      },
-      onComplete: () => {
-        setVideo((pre) => ({
-          ...pre,
-          startPlay: true,
-          isPlaying: true,
-        }));
+        trigger: videoRef.current[videoId],
+        start: "top center",
+        toggleActions: "play none none none",
+        onEnter: () => {
+          if (!isPlaying) {
+            setVideo((pre) => ({
+              ...pre,
+              startPlay: true,
+              isPlaying: true,
+            }));
+          }
+        },
       },
     });
-  }, [isEnd, videoId]);
+  }, [videoId, isPlaying]);
 
   useEffect(() => {
     let currentProgress = 0;
@@ -141,11 +144,11 @@ const VideoCarousel = () => {
         break;
 
       case "pause":
-        setVideo((pre) => ({ ...pre, isPlaying: !pre.isPlaying }));
+        setVideo((pre) => ({ ...pre, isPlaying: false }));
         break;
 
       case "play":
-        setVideo((pre) => ({ ...pre, isPlaying: !pre.isPlaying }));
+        setVideo((pre) => ({ ...pre, isPlaying: true }));
         break;
 
       default:
