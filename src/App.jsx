@@ -10,6 +10,7 @@ function App() {
       <Navbar/>
       <Hero/>
       <Highlights/>
+      <Model />
     </main>
   )
 }
