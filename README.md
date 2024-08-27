@@ -20,6 +20,6 @@ Follow these steps to run the project locally.
 Clone the repository to your local machine and install the necessary dependencies:
 
 ```bash
-git clone https://github.com/your_username/your_project_name.git
-cd your_project_name
+https://github.com/haticebabaoglu/iphone.git
+cd iphone
 npm install
