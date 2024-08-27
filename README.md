@@ -1,10 +1,9 @@
 # React + Vite Apple iPhone Promotion Website
 
-This project is a web application that showcases an Apple iPhone promotion using React, Vite, and Three.js. It comes with a minimal setup that includes HMR (Hot Module Replacement) and some basic ESLint rules.
-
+This project is a web application that showcases an Apple iPhone promotion using React, Vite, and Three.js. 
 <video controls src="20240827-1211-10.9794696.mp4" title="iphone"></video>
 
-<video controls src="20240827-1213-25.5317824.mp4" title="iphone3d"></video>
+<video controls src="20240827-1246-49.3987245.mp4" title="3d"></video>
 ![heroSection](image.png)
 
 ## Getting Started
